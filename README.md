@@ -1,5 +1,7 @@
 # lipodevice
 
+脚本连接[点这里😝](https://github.com/jingyiqiujing/lipodevice)
+
 ## 使用说明：
 
 1. 初始状态.framework或.a文件目录：
