@@ -7,20 +7,19 @@
 # lipo -create MobileRTC.framework/MobileRTC-armv7 MobileRTC.framework/MobileRTC-arm64 -output MobileRTC.framework/MobileRTC-new
 
 ORIGINF=$1
-NEWF=$2
+
 
 if [ ! -f "$ORIGINF" ]; then
     echo "Error: $ORIGINF 文件不存在";
     exit
 fi
 
-if [ -z $NEWF ]; then
-    echo "Error: 新路径不能为空";
-    exit
-fi
-
 DIR=$(dirname "$ORIGINF")
 FILENAME=$(basename "$ORIGINF")
+
+# 中间文件
+NEWF=${FILENAME}"-new"
+
 #echo;echo "所在目录 '$DIR', 文件名称 $FILENAME";
 
 # 进入到指定目录下，可以避免下面处理带空格的路径
